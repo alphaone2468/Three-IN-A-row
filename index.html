@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY GAME</title>
+    <style>
+        body{
+            background-color: rgb(96, 142, 142);
+        }
+        .con{
+            border: 6px solid rgb(156, 129, 97);
+            height: 330px;
+            width: 400px;
+            position: absolute;
+            left: 550px;
+            top: 310px;
+            background-color: bisque;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            box-shadow: -3px 3px 13px black;
+
+
+        }
+        .q{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+        }
+        .circle{
+            border: 2px solid #06130e;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 50%;
+            background-color: rgb(96, 142, 142);
+        }
+        #upper{
+            display: flex;
+            width: 400px;
+            height: 100px;
+            justify-content: space-around;
+            position: relative;
+            left: 550px;
+            top: -10px;
+        }
+        #heading{
+            text-align: center;
+            font-size: 50px;
+            color:aliceblue;
+            text-shadow: 3px 3px 13px  black;
+        }
+        .d{
+            font-size: 54px;
+            /* animation: alphaaa 10s infinite; */
+        }
+        .d:hover{
+            transform: scale(10);
+            animation: alphaaa 1s infinite;
+
+        }
+        @keyframes alphaaa {
+            to{
+                transform: scale(1.1);
+            }
+            from{
+                transform: scale(1);
+            }
+        }
+        @media(max-width:1600px){
+            #callme{
+                display: none;
+            }
+            #upper{
+                top: 83px;
+            }
+        }
+        @media(max-width:1500px){
+            .con{
+                left: 500px;
+                top: 338px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            #upper{
+                left: 500px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+            #callme{
+                display: block;
+            }
+        }
+        @media(max-width:1300px){
+            .con{
+                left: 450px;
+                top: 338px;
+            }
+            #upper{
+                left: 450px;
+                top: 94px;
+
+            }
+            .det{
+                display: none;
+            }
+
+        }
+        @media(max-width:1200px){
+            .con{
+                left: 400px;
+                top: 338px;
+            }
+            #upper{
+                left: 400px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        @media(max-width:1100px){
+            .con{
+                left: 350px;
+                top: 338px;
+
+            }
+            #upper{
+                left: 350px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        @media(max-width:1000px){
+            .con{
+                left: 300px;
+                top: 338px;
+            }
+            #upper{
+                left: 300px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        @media(max-width:900px){
+            .con{
+                left: 250px;
+                top: 338px;
+            }
+            #upper{
+                left: 250px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }@media(max-width:800px){
+            .con{
+                left: 200px;
+                top: 338px;
+            }
+            #upper{
+                left: 200px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }@media(max-width:700px){
+            .con{
+                left: 150px;
+                top: 338px;
+            }
+            #upper{
+                left: 150px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }@media(max-width:600px){
+            .con{
+                left: 100px;
+                top: 338px;
+            }
+            #upper{
+                left: 100px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        @media(max-width:550px){
+            .con{
+                left: 80px;
+                top: 338px;
+            }
+            #upper{
+                left: 80px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        @media(max-width:500px){
+            .con{
+                left: 30px;
+                top: 338px;
+            }
+            #upper{
+                left: 70px;
+                top: 94px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        @media(max-width:450px){
+            .con{
+                left: -6px;
+                top: 338px;
+                width: 350px;
+                margin-left: 30px;
+                
+            }
+            #upper{
+                left: 13px;
+                top: 94px;
+                width: 350px;
+                margin-left: 11px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        @media(max-width:400px){
+            .con{
+                left: -6px;
+                top: 338px;
+                width: 350px;
+                margin-left: 15px;
+                
+            }
+            #upper{
+                left: 13px;
+                top: 94px;
+                width: 350px;
+                margin-left: 7px;
+            }
+            .det{
+                display: none;
+            }
+        }
+        #callme{
+            color: aliceblue;
+            font-size: 40px;
+            text-align: center;
+            margin-top: -73px;
+        }
+        .det{
+            color: white;
+            position: relative;
+            left: 1141px;
+
+        }
+        .q p{
+            visibility: hidden;
+        }
+        #instructions{
+            position: relative;
+            top: 500px;
+            text-align: center;
+            color: white;
+        }
+        #imgg{
+            width: 60px;
+            height: 60px;
+            float: right;
+            position: relative;
+            bottom: 115px;
+        }
+        #showme{
+            /* padding: 0px; */
+            margin: 0px;
+            background-color: white;
+            width:80px;
+            text-align: center;
+            border-radius: 2px;
+            position:relative;
+            right: 10px;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">3 IN A LINE</h1>
+    <div id="upper" onclick="ResultChecking()">
+
+        <h1 id='arrowone' class="d"  onclick="selected1()">&darr;</h1>
+        <h1 id='arrowtwo' class="d"  onclick="selected2()">&darr;</h1>
+        <h1 id='arrowthree' class="d"  onclick="selected3()">&darr;</h1>
+        <h1 id='arrowfour' class="d"  onclick="selected4()">&darr;</h1>
+    </div>
+    
+    <div class="con">
+        <div class="q">
+            <div  id="1" class="circle-1 circle">
+                <p>&nbsp;</p>
+            </div>
+            <div  id="2" class="circle-2 circle">
+                <p>1</p>
+            </div>
+            <div  id="3" class="circle-3 circle">
+                <p>1</p>
+            </div>
+            <div  id="4" class="circle-4 circle">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="q">
+            <div  id="5" class="circle-5 circle">
+                <p>1</p>
+            </div>
+            <div  id="6" class="circle-6 circle">
+                <p>1</p>
+            </div>
+            <div id="7"  class="circle-7 circle">
+                <p>1</p>
+            </div>
+            <div id="8"  class="circle-8 circle">
+                <p>1</p>
+            </div>
+
+        </div>
+        <div class="q">
+
+            <div id="9" class="circle-9 circle">
+                <p>1</p>
+            </div>
+            <div id="10" class="circle-10 circle">
+                <p>1</p>
+            </div>        
+            <div id="11" class="circle-11 circle">
+                <p>1</p>
+            </div>
+            <div id="12" class="circle-12 circle">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="q">
+
+            <div id="13" class="circle-13 circle">
+                <p>1</p>
+            </div>
+            <div id="14" class="circle-14 circle">
+                <p>1</p>
+            </div>
+            <div id="15" class="circle-15 circle">
+                <p>1</p>
+            </div>
+            <div id="16" class="circle-16 circle">
+                <p>1</p>
+            </div>
+        </div>
+        
+    </div>
+    <div id="imgg">
+        <img width="60px" height="60px" src="https://static.thenounproject.com/png/901841-200.png" alt="" onclick="restart()" id="restartbutton">
+        <!-- <p id="showme">RESTART</p> -->
+
+    </div>
+    <h1 id="callme">player - 1's chance</h1>
+    <h1 id='details1' class="det">player -1 has yellow balls</h1>
+    <h1 id='details2' class="det">player -2 has blue balls</h1>
+    <div id="instructions">
+        <h1>How To Play : </h1>
+        <p>it is a two player game. Players 1 and 2 each have a set of yellow and blue balls.
+            To drop the balls into the container, click the arrows.
+            Making three of your balls lie in a line, whether it be horizontal, vertical, or diagonal, is the goal of a player</p>
+    </div>
+    <p></p>
+    <script>
+
+
+        var pla1=[];
+        var pla2=[];
+        var res=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        var p=1;
+        function player() {
+            if(p==1){
+                p=2;
+                // console.log("player1");
+                return p;        
+
+            }
+            if(p==2){
+                p=1;
+                // console.log("player2");
+                return p; 
+            }
+        }
+        var one=0;
+        function selected4(){
+            let a=document.getElementById("4")
+            let b=document.getElementById("8")
+            let c=document.getElementById("12")
+            let d=document.getElementById("16")
+            one=one+1
+            var q=player();
+            if(one==1){
+                if(q==1){
+                    d.style.backgroundColor='skyblue';
+                    pla2.push(16);
+                    res[15]=2;
+                }
+                if(q==2){
+                    d.style.backgroundColor='yellow';
+                    pla1.push(16);
+                    res[15]=1;
+                }
+            }
+            if(one==2){
+                if(q==1){
+
+                    c.style.backgroundColor='skyblue';
+                    pla2.push(12);
+                    res[11]=2;                                                                     
+                }
+                else{
+                    c.style.backgroundColor='yellow';
+                    pla1.push(12);
+                    res[11]=1;
+                }
+            }
+            if(one==3){
+                if(q==1){
+
+                    b.style.backgroundColor='skyblue';
+                    pla2.push(8);
+                    res[7]=2;
+                }
+                else{
+                    b.style.backgroundColor='yellow';
+                    pla1.push(8);
+                    res[7]=1;
+                }
+            }
+            if(one==4){
+                if(q==1){
+                    a.style.backgroundColor='skyblue';
+                    pla2.push(4);
+                    res[3]=2;
+                }
+                else{
+                    a.style.backgroundColor='yellow';
+                    pla1.push(4);
+                    res[3]=1;
+                }
+            }
+        }
+        var two=0;
+        function selected3(){
+
+            let a=document.getElementById("3")
+            let b=document.getElementById("7")
+            let c=document.getElementById("11")
+            let d=document.getElementById("15")
+            var r=player();
+            two=two+1;
+            if(two==1){
+                if(r==1){
+
+                    d.style.backgroundColor='skyblue';
+                    pla2.push(15);
+                    res[14]=2;
+                }
+                else{
+                    d.style.backgroundColor='yellow';
+                    pla1.push(15);
+                    res[14]=1;
+                }
+            }
+            if(two==2){
+                if(r==1){
+
+                    c.style.backgroundColor='skyblue';
+                    pla2.push(11);
+                    res[10]=2;
+                }
+                else{
+                    c.style.backgroundColor='yellow';
+                    pla1.push(11);
+                    res[10]=1;
+                }
+            }
+            if(two==3){
+                if(r==1){
+
+                    b.style.backgroundColor='skyblue';
+                    pla2.push(7);
+                    res[6]=2;
+                }
+                else{
+                    b.style.backgroundColor='yellow';
+                    pla1.push(7);
+                    res[6]=1;
+                }
+            }
+            if(two==4){
+                if(r==1){
+
+                    a.style.backgroundColor='skyblue';
+                    pla2.push(3);
+                    res[2]=2;
+                }
+                else{
+                    a.style.backgroundColor='yellow';
+                    pla1.push(3);
+                    res[2]=1;
+                }
+            }
+        }
+        var three=0;
+        function selected2(){
+
+            let a=document.getElementById("2")
+            let b=document.getElementById("6")
+            let c=document.getElementById("10")
+            let d=document.getElementById("14")
+            var s=player();
+            three=three+1
+            if(three==1){
+                if(s==1){
+
+                    d.style.backgroundColor='skyblue';
+                    pla2.push(14);
+                    res[13]=2;
+                }
+                else{
+                    d.style.backgroundColor='yellow';
+                    pla1.push(14);
+                    res[13]=1;
+                }
+            }
+            if(three==2){
+                if(s==1){
+
+                    c.style.backgroundColor='skyblue';
+                    pla2.push(10);
+                    res[9]=2;
+                }
+                else{
+                    c.style.backgroundColor='yellow';
+                    pla1.push(10);
+                    res[9]=1;
+                }
+            }
+            if(three==3){
+                if(s==1){
+
+                    b.style.backgroundColor='skyblue';
+                    pla2.push(6);
+                    res[5]=2;
+                }
+                else{
+                    b.style.backgroundColor='yellow';
+                    pla1.push(6);
+                    res[5]=1;
+                }
+            }
+            if(three==4){
+                if(s==1){
+
+                    a.style.backgroundColor='skyblue';
+                    pla2.push(2);
+                    res[1]=2;
+                }
+                else{
+                    a.style.backgroundColor='yellow';
+                    pla1.push(2);
+                    res[1]=1;
+                }
+            }
+        }
+        var four=0
+
+        function selected1(){
+            let a=document.getElementById("1")
+            let b=document.getElementById("5")
+            let c=document.getElementById("9")
+            let d=document.getElementById("13")
+            var t=player();
+            four=four+1
+            if(four==1){
+                if(t==1){
+
+                    d.style.backgroundColor='skyblue';
+                    pla2.push(13);
+                    res[12]=2;
+                }
+                else{
+                    d.style.backgroundColor='yellow';
+                    pla1.push(13);
+                    res[12]=1;
+                }
+            }
+            if(four==2){
+                if(t==1){
+
+                    c.style.backgroundColor='skyblue';
+                    pla2.push(9);
+                    res[8]=2;
+                }
+                else{
+                    c.style.backgroundColor='yellow';
+                    pla1.push(9);
+                    res[8]=1;
+                }
+            }
+            if(four==3){
+                if(t==1){
+
+                    b.style.backgroundColor='skyblue';
+                    pla2.push(5);
+                    res[4]=2;
+                }
+                else{
+                    b.style.backgroundColor='yellow';
+                    pla1.push(5);
+                    res[4]=1;
+                }
+            }
+            if(four==4){
+                if(t==1){
+
+                    a.style.backgroundColor='skyblue';
+                    pla2.push(1);
+                    res[0]=2;
+                }
+                else{
+                    a.style.backgroundColor='yellow';
+                    pla1.push(1);
+                    res[0]=1;
+                }
+            }
+        }
+        count=0;
+        function ResultChecking()
+        {
+            count=count+1;
+            document.getElementById("instructions").style.display="none"
+            // funfordrawmatch();
+            // console.log(count);
+            if(count%2==0){
+                document.getElementById("callme").innerHTML='player -1s chance';
+            }
+            else{
+                document.getElementById("callme").innerHTML='player -2s chance';
+
+            }
+            document.getElementById("details1").style.display='none';
+            document.getElementById("details2").style.display='none';
+            // console.log("calling");
+            var a0=document.getElementById("1");
+            var a1=document.getElementById("2");
+            var a2=document.getElementById("3");
+            var a3=document.getElementById("4");
+            var a4=document.getElementById("5");
+            var a5=document.getElementById("6");
+            var a6=document.getElementById("7");
+            var a7=document.getElementById("8");
+            var a8=document.getElementById("9");
+            var a9=document.getElementById("10");
+            var a10=document.getElementById("11");
+            var a11=document.getElementById("12");
+            var a12=document.getElementById("13");
+            var a13=document.getElementById("14");
+            var a14=document.getElementById("15");
+            var a15=document.getElementById("16");
+            var callmesid=document.getElementById("callme");
+            if(res[0]==1)
+            {
+                if(res[5]==1)
+                {
+                    if(res[10]==1)
+                    {
+                        a0.style.borderRadius='30%';
+                        a5.style.borderRadius='30%';
+                        a10.style.borderRadius='30%';
+                        winning1();
+                    }
+                }
+            }
+            if(res[0]==1)
+            {
+                if(res[1]==1)
+                {
+                    if(res[2]==1) 
+                    {
+                        a0.style.borderRadius='30%';
+                        a1.style.borderRadius='30%';
+                        a2.style.borderRadius='30%';
+                        winning1();
+
+
+                        console.log("0 1 2");
+                    }
+               }
+            }
+            if(res[0]==1){
+            if(res[4]==1)
+               {
+                   if(res[8]==1)
+                   {
+                       console.log("0 4 8");
+                       a0.style.borderRadius='30%';
+                       a4.style.borderRadius='30%';
+                       a8.style.borderRadius='30%';
+                       winning1();
+
+                   }
+               }
+            }
+            if(res[1]==1)
+            {
+                if(res[6]==1)
+                {
+                    if(res[11]==1)
+                    {
+                        console.log(" ia dbsvhsbfwfgthebgtnhryhrbbjv");
+                        a1.style.borderRadius='30%';
+                        a6.style.borderRadius='30%';
+                        a11.style.borderRadius='30%';
+                        winning1();
+                    }
+                }
+            }
+            if(res[1]==1)
+            {
+                if(res[2]==1)
+                {
+                    if(res[3]==1) 
+                    {
+                        console.log("1 2 3");
+                        a1.style.borderRadius='30%';
+                        a2.style.borderRadius='30%';
+                        a3.style.borderRadius='30%';
+                        winning1();
+                    }
+               }
+            }
+            if(res[1]==1){
+            if(res[5]==1)
+               {
+                   if(res[9]==1)
+                   {
+                       console.log("1 5 9");
+                       a1.style.borderRadius='30%';
+                       a5.style.borderRadius='30%';
+                       a9.style.borderRadius='30%';
+                       winning1();
+                   }
+               }
+            }
+            if(res[2]==1)
+            {
+                if(res[6]==1)
+                {
+                    if(res[10]==1)
+                    {
+                        console.log("2 4 6");
+                        a2.style.borderRadius='30%';
+                        a6.style.borderRadius='30%';
+                        a10.style.borderRadius='30%';
+                        winning1();
+                    }
+                }
+            }
+
+            if(res[3]==1)
+            {
+                if(res[7]==1)
+                {
+                    if(res[11]==1)
+                    {
+                       console.log("3 7 11"); 
+                       a3.style.borderRadius='30%';
+                       a7.style.borderRadius='30%';
+                       a11.style.borderRadius='30%';
+                       winning1();
+                    }
+                }
+            }
+
+            if(res[4]==1)
+            {
+                if(res[8]==1)
+                {
+                    if(res[12]==1) 
+                    {
+                        console.log("4 8 12");
+                        a4.style.borderRadius='30%';
+                        a8.style.borderRadius='30%';
+                        a12.style.borderRadius='30%';
+                        winning1();
+                    }
+               }
+            }
+            if(res[4]==1){
+                if(res[5]==1)
+               {
+                   if(res[6]==1)
+                   {
+                       console.log("4 5 6");
+                       a4.style.borderRadius='30%';
+                       a5.style.borderRadius='30%';
+                       a6.style.borderRadius='30%';
+                       winning1();
+                   }
+               }}
+            if(res[4]==1){
+                if(res[9]==1)
+               {
+                   if(res[14]==1)
+                   {
+                       console.log("4 9 14");
+                       a4.style.borderRadius='30%';
+                       a9.style.borderRadius='30%';
+                       a14.style.borderRadius='30%';
+                       winning1();
+                   }
+               }}
+            if(res[5]==1)
+            {
+                if(res[6]==1)
+                {
+                    if(res[7]==1) 
+                    {
+                        console.log("5 6 7");
+                        a5.style.borderRadius='30%';
+                        a6.style.borderRadius='30%';
+                        a7.style.borderRadius='30%';
+                        winning1();
+                    }
+                }
+            }
+            if(res[5]==1){
+            if(res[9]==1)
+               {
+                   if(res[13]==1)
+                   {
+                       
+                       console.log("5 9 13");
+                       a5.style.borderRadius='30%';
+                       a9.style.borderRadius='30%';
+                       a13.style.borderRadius='30%';
+                       winning1();
+                   }
+               }}
+            if(res[5]==1){
+            if(res[10]==1)
+               {
+                   if(res[15]==1)
+                   {
+                       
+                       console.log("5 10 15");
+                       a5.style.borderRadius='30%';
+                       a10.style.borderRadius='30%';
+                       a15.style.borderRadius='30%';
+                       winning1();
+                   }
+               }}
+
+            if(res[6]==1)
+            {
+                if(res[10]==1)
+                {
+                    if(res[14]==1)
+                    {
+                        console.log("6 10 14");
+                        a6.style.borderRadius='30%';
+                        a10.style.borderRadius='30%';
+                        a14.style.borderRadius='30%';  
+                        winning1();           
+                    }
+                }
+            }
+
+            if(res[7]==1)
+            {
+                if(res[11]==1)
+                {
+                    if(res[15]==1)
+                    {
+                        console.log("7 11 15"); 
+                        a7.style.borderRadius='30%';
+                        a11.style.borderRadius='30%';
+                        a15.style.borderRadius='30%';
+                        winning1();                 
+                    }
+                }
+            }
+
+            if(res[8]==1)
+            {
+                if(res[9]==1)
+                {
+                    if(res[10]==1)
+                    {
+                        console.log("8 9 10");  
+                        a8.style.borderRadius='30%';
+                        a9.style.borderRadius='30%';
+                        a10.style.borderRadius='30%';
+                        winning1();              
+                    }
+                }
+            }
+
+            if(res[9]==1)
+            {
+                if(res[10]==1)
+                {
+                    if(res[11]==1)
+                    {
+                       console.log("9 10 11"); 
+                       a9.style.borderRadius='30%';
+                       a10.style.borderRadius='30%';
+                       a11.style.borderRadius='30%';
+                       winning1();
+                                                              
+                    }
+                }
+
+            }
+            if(res[12]==1)
+            {
+                if(res[13]==1)
+                {
+                    if(res[14]==1)
+                    {
+                        console.log("12 13 14");
+                        a12.style.borderRadius='30%';
+                        a13.style.borderRadius='30%';
+                        a14.style.borderRadius='30%';
+                        winning1();
+                                                             
+                    }
+                }
+            }
+
+            if(res[13]==1)
+            {
+                if(res[14]==1)
+                {
+                    if(res[15]==1)
+                    {
+                        console.log("13 14 15"); 
+                        a13.style.borderRadius='30%';
+                        a14.style.borderRadius='30%';
+                        a15.style.borderRadius='30%'; 
+                        winning1();             
+                    }
+                }
+            }
+            if(res[2]==1)
+            {
+                if(res[5]==1)
+                {
+                    if(res[8]==1)
+                    {
+                        console.log("2 5 8");
+                        a2.style.borderRadius='30%';
+                        a5.style.borderRadius='30%';
+                        a8.style.borderRadius='30%';
+                        winning1();               
+                    }
+                }
+            }
+            if(res[3]==1)
+            {
+                if(res[6]==1)
+                {
+                    if(res[9]==1)
+                    {
+                        console.log("3 6 9"); 
+                        a3.style.borderRadius='30%';
+                        a6.style.borderRadius='30%';
+                        a9.style.borderRadius='30%';
+                        winning1();              
+                    }
+                }
+            }
+            if(res[6]==1)
+            {
+                if(res[9]==1)
+                {
+                    if(res[12]==1)
+                    {
+                        console.log("6 9 12");  
+                        a6.style.borderRadius='30%';
+                        a9.style.borderRadius='30%';
+                        a12.style.borderRadius='30%';
+                        winning1();             
+                    }
+                }
+            }
+            if(res[7]==1)
+            {
+                if(res[10]==1)
+                {
+                    if(res[13]==1)
+                    {
+                        console.log("7 10 13");  
+                        a7.style.borderRadius='30%';
+                        a10.style.borderRadius='30%';
+                        a13.style.borderRadius='30%';
+                        winning1();             
+                    }
+                }
+            }
+            //end of player one checking
+            if(res[0]==2)
+                {
+                    if(res[5]==2)
+                    {
+                        if(res[10]==2)
+                        {
+                            console.log(" ia dbsvhsbfwjv");
+                            a0.style.borderRadius='30%';
+                            a5.style.borderRadius='30%';
+                            a10.style.borderRadius='30%';
+                            winning2();
+                        }
+                    }
+                }
+                if(res[0]==2)
+                {
+                    if(res[1]==2)
+                    {
+                        if(res[2]==2) 
+                        {
+                            a0.style.borderRadius='30%';
+                            a1.style.borderRadius='30%';
+                            a2.style.borderRadius='30%';
+                            winning2();
+
+
+                            console.log("0 1 2");
+                        }
+                    }
+                }
+                if(res[0]==2){
+                if(res[4]==2)
+                {
+                    if(res[8]==2)
+                    {
+                        console.log("0 4 8");
+                        a0.style.borderRadius='30%';
+                        a4.style.borderRadius='30%';
+                        a8.style.borderRadius='30%';
+                        winning2();
+
+                    }
+                }}
+                
+                if(res[1]==2)
+                {
+                    if(res[6]==2)
+                    {
+                        if(res[11]==2)
+                        {
+                            console.log(" ia dbsvhsbfwfgthebgtnhryhrbbjv");
+                            a1.style.borderRadius='30%';
+                            a6.style.borderRadius='30%';
+                            a11.style.borderRadius='30%';
+                            winning2();
+                        }
+                    }
+                }
+                if(res[1]==2)
+                {
+                    if(res[2]==2)
+                    {
+                        if(res[3]==2) 
+                        {
+                            console.log("1 2 3");
+                            a1.style.borderRadius='30%';
+                            a2.style.borderRadius='30%';
+                            a3.style.borderRadius='30%';
+                            winning2();
+                        }
+                    }
+                }
+                if(res[1]==2){
+                if(res[5]==2)
+                {
+                    if(res[9]==2)
+                    {
+                        console.log("1 5 9");
+                        a1.style.borderRadius='30%';
+                        a5.style.borderRadius='30%';
+                        a9.style.borderRadius='30%';
+                        winning2();
+                    }
+                }}
+                if(res[2]==2)
+                {
+                    if(res[6]==2)
+                    {
+                        if(res[10]==2)
+                        {
+                            console.log("2 4 6");
+                            a2.style.borderRadius='30%';
+                            a6.style.borderRadius='30%';
+                            a10.style.borderRadius='30%';
+                            winning2();
+                        }
+                    }
+                }
+
+                if(res[3]==2)
+                {
+                    if(res[7]==2)
+                    {
+                        if(res[11]==2)
+                        {
+                        console.log("3 7 11"); 
+                        a3.style.borderRadius='30%';
+                        a7.style.borderRadius='30%';
+                        a11.style.borderRadius='30%';
+                        winning2();
+                        }
+                    }
+                }
+
+                if(res[4]==2)
+                {
+                    if(res[8]==2)
+                    {
+                        if(res[12]==2) 
+                        {
+                            console.log("4 8 12");
+                            a4.style.borderRadius='30%';
+                            a8.style.borderRadius='30%';
+                            a12.style.borderRadius='30%';
+                            winning2();
+                        }
+                    }
+                }
+                if(res[4]==2){
+                if(res[5]==2)
+                {
+                    if(res[6]==2)
+                    {
+                        console.log("4 5 6");
+                        a4.style.borderRadius='30%';
+                        a5.style.borderRadius='30%';
+                        a6.style.borderRadius='30%';
+                        winning2();
+                    }
+                }}
+                if(res[4]==2){
+                if(res[9]==2)
+                {
+                    if(res[14]==2)
+                    {
+                        console.log("4 9 14");
+                        a4.style.borderRadius='30%';
+                        a9.style.borderRadius='30%';
+                        a14.style.borderRadius='30%';
+                        winning2();
+                    }
+                }}
+                if(res[5]==2)
+                {
+                    if(res[6]==2)
+                    {
+                        if(res[7]==2) 
+                        {
+                            console.log("5 6 7");
+                            a5.style.borderRadius='30%';
+                            a6.style.borderRadius='30%';
+                            a7.style.borderRadius='30%';
+                            winning2();
+                        }
+                    }
+                }
+                if(res[5]==2){
+                if(res[9]==2)
+                {
+                    if(res[13]==2)
+                    {
+                        
+                        console.log("5 9 13");
+                        a5.style.borderRadius='30%';
+                        a9.style.borderRadius='30%';
+                        a13.style.borderRadius='30%';
+                        winning2();
+                    }
+                }}
+                if(res[5]==2){
+                if(res[10]==2)
+                {
+                    if(res[15]==2)
+                    {
+                        
+                        console.log("5 10 15");
+                        a5.style.borderRadius='30%';
+                        a10.style.borderRadius='30%';
+                        a15.style.borderRadius='30%';
+                        winning2();
+                    }
+                }}
+
+                if(res[6]==2)
+                {
+                    if(res[10]==2)
+                    {
+                        if(res[14]==2)
+                        {
+                            console.log("6 10 14");
+                            a6.style.borderRadius='30%';
+                            a10.style.borderRadius='30%';
+                            a14.style.borderRadius='30%';  
+                            winning2();           
+                        }
+                    }
+                }
+
+                if(res[7]==2)
+                {
+                    if(res[11]==2)
+                    {
+                        if(res[15]==2)
+                        {
+                            console.log("7 11 15"); 
+                            a7.style.borderRadius='30%';
+                            a11.style.borderRadius='30%';
+                            a15.style.borderRadius='30%';
+                            winning2();                 
+                        }
+                    }
+                }
+
+                if(res[8]==2)
+                {
+                    if(res[9]==2)
+                    {
+                        if(res[10]==2)
+                        {
+                            console.log("8 9 10");  
+                            a8.style.borderRadius='30%';
+                            a9.style.borderRadius='30%';
+                            a10.style.borderRadius='30%';
+                            winning2();              
+                        }
+                    }
+                }
+
+                if(res[9]==2)
+                {
+                    if(res[10]==2)
+                    {
+                        if(res[11]==2)
+                        {
+                        console.log("9 10 11"); 
+                        a9.style.borderRadius='30%';
+                        a10.style.borderRadius='30%';
+                        a11.style.borderRadius='30%';
+                        winning2();
+                                                                
+                        }
+                    }
+
+                }
+                if(res[12]==2)
+                {
+                    if(res[13]==2)
+                    {
+                        if(res[14]==2)
+                        {
+                            console.log("12 13 14");
+                            a12.style.borderRadius='30%';
+                            a13.style.borderRadius='30%';
+                            a14.style.borderRadius='30%';
+                            winning2();
+                                                                
+                        }
+                    }
+                }
+
+                if(res[13]==2)
+                {
+                    if(res[14]==2)
+                    {
+                        if(res[15]==2)
+                        {
+                            console.log("13 14 15"); 
+                            a13.style.borderRadius='30%';
+                            a14.style.borderRadius='30%';
+                            a15.style.borderRadius='30%'; 
+                            winning2();             
+                        }
+                    }
+                }
+                if(res[2]==2)
+                {
+                    if(res[5]==2)
+                    {
+                        if(res[8]==2)
+                        {
+                            console.log("2 5 8");
+                            a2.style.borderRadius='30%';
+                            a5.style.borderRadius='30%';
+                            a8.style.borderRadius='30%';
+                            winning2();               
+                        }
+                    }
+                }
+                if(res[3]==2)
+                {
+                    if(res[6]==2)
+                    {
+                        if(res[9]==2)
+                        {
+                            console.log("3 6 9"); 
+                            a3.style.borderRadius='30%';
+                            a6.style.borderRadius='30%';
+                            a9.style.borderRadius='30%';
+                            winning2();              
+                        }
+                    }
+                }
+                if(res[6]==2)
+                {
+                    if(res[9]==2)
+                    {
+                        if(res[12]==2)
+                        {
+                            console.log("6 9 12");  
+                            a6.style.borderRadius='30%';
+                            a9.style.borderRadius='30%';
+                            a12.style.borderRadius='30%';
+                            winning2();             
+                        }
+                    }
+                }
+                if(res[7]==2)
+                {
+                    if(res[10]==2)
+                    {
+                        if(res[13]==2)
+                        {
+                            console.log("7 10 13");  
+                            a7.style.borderRadius='30%';
+                            a10.style.borderRadius='30%';
+                            a13.style.borderRadius='30%';
+                            winning2();             
+                        }
+                    }
+                }
+        }
+        function winning1()
+        {
+            document.getElementById('heading').innerHTML='player 1 won';
+            var nonee=document.getElementById('upper')
+            nonee.style.visibility='hidden';
+            var callmesid=document.getElementById("callme");
+            callmesid.style.display='none';
+        }
+        function winning2()
+        {
+            document.getElementById('heading').innerHTML='player 2 won';
+            var nonee=document.getElementById('upper')
+            nonee.style.visibility='hidden';
+            var callmesid=document.getElementById("callme");
+            callmesid.style.display='none';
+        }
+        function funfordrawmatch()
+        {
+            console.log(" iam under draw");
+            var i=0
+            var countaa=0
+            while(i<16){
+                if(res[i]!=0){
+                    countaa=countaa+1;
+
+                }
+            }
+            console.log("countaa",countaa);
+            if(countaa==16){
+                console.log("draw");
+            }
+
+        }
+        function restart(){
+            console.log("clicked me")
+            res=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            var i=1
+            while(i<17){
+                document.getElementById(`${i}`).style.backgroundColor="rgb(96, 142, 142)"
+                document.getElementById(`${i}`).style.borderRadius="50%"
+                i=i+1;
+            }
+            document.getElementById("upper").style.visibility="visible";
+            document.getElementById("heading").innerHTML="3 IN A LINE"
+            p=1;
+
+            one=0
+            two=0
+            three=0
+            four=0
+            document.getElementById("instructions").style.display="block"
+            document.getElementById("callme").style.display="block"
+
+        }
+    </script>
+
+</body>
+</html>
